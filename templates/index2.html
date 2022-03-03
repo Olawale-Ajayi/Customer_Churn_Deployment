@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Churn Prediction</title>
+
+<link  rel="stylesheet" type="text/css" href="../static/style.css">
+
+
+
+</head>
+
+<body>
+
+
+
+
+    {% if error %}
+
+    <div id = "error_message">
+        
+    
+           {{error}}
+    
+        </div>
+
+    {% endif %}
+
+
+
+
+    <div id="contact-form">
+
+
+        <div>
+          <h1>XYZ Telecommunication Limited Customers Churn Prediction</h1> 
+          <br>
+          <h4>Please Enter the Following Parameter as appropriate....</h4> 
+        </div>
+          
+      
+             <form method="POST", action="{{url_for('home')}}">
+            <div>             
+                <label for="Gender" placeholder = "please choose a gender">
+                <span>Please Choose a Gender: </span>
+                    <select id="Gender" name="gender" tabindex="4">   
+                        <option value=1>Male</option>
+                        <option value=0>Female</option>  
+                    </select>
+                </label>
+            </div>
+
+
+
+            <div>             
+                <label for="Seniority" placeholder = "please choose a gender">
+                <span>Seniority: Please choose if are a junior Citizen or senior citizen</span>
+                    <select id="Seniority" name="Seniority" tabindex="4">   
+                        <option value="0">Junior Citizen</option>
+                        <option value="1">Senior Citizen</option>
+                        
+                    </select>
+                </label>
+            </div>
+
+
+
+
+            
+            <div>             
+                <label for="Payment" placeholder = "please choose a Payment Method">
+                <span>Please choose a Payment Method: </span>
+                    <select  id="Payment" name="Payment" tabindex="4">   
+                        <option value="2">Electronic check</option>
+                        <option value="1">Mailed check</option>
+                        <option value="0">Bank transfer (automatic)</option>
+                        <option value="3">Credit card (automatic)</option>
+
+
+                        
+                    </select>
+                </label>
+            </div>
+
+
+
+
+
+
+            <div>
+                <label for="MonthlyCharges">
+                  <span class="required">Enter Monthly Charges: </span> 
+                  <input type="number"  id="MCharges" name="MCharges" value="" placeholder="Enter Monthly Charges" required="required" tabindex="1" autofocus="autofocus" />
+                </label> 
+            </div>
+
+            <div>
+                <label for="TotalCharges">
+                  <span class="required">Enter Total Charges: </span> 
+                  <input type="number" id="TCharges" name="TCharges" value="" placeholder="Enter Total Charges" required="required" tabindex="1" autofocus="autofocus" />
+                </label> 
+            </div>
+
+
+            <div>              
+                <button name="submit" type="submit" id="submit" >Get Prediction</button> 
+            </div>
+             </form>
+      
+     </div>
+      
+      
+      
+    
+
+
+
+
+
+
+</body>
+</html>

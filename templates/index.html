@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Home Page</title>
+
+
+    <link  rel="stylesheet" type="text/css" href="../static/result.css">
+
+    
+</head>
+
+<body>
+
+
+
+    <header id = "header">
+
+        <h1>Customer Churn Prediction Result</h1>
+
+    </header>
+    <br><br>
+
+
+    <div id = "result">
+
+    {%if data == 0%}
+    <h3>This customer is likely going to stop transacting with us.<br>
+    We need to engage this customer</h3>
+
+
+    {% else %}
+
+    <h3>This customer is our regular transacting customer</h3>
+
+
+    {%  endif  %}
+
+
+    </div>
+
+<div id = "login">
+
+    <a href="/">Go back to home page</a>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
